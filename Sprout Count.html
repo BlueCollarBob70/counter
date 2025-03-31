@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<body>
+
+        <svg width="644" height="200" id="_agr8vw" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" aria-labelledby="_agr8vw_title _agr8vw_desc" preserveAspectRatio="xMidYMid meet">
+          <image width="644" height="200" href="BB_GIF_IMG/BB_GIF.png" />
+
+    <rect
+
+      x="0"
+
+      y="0"
+
+      width="644"
+
+      height="200"
+
+      style="fill:none; stroke-width:10;stroke:green"
+
+    />
+
+  <text x="3%" y="80%" text-anchor="left" dominant-baseline="left" name="days" style="opacity: 1;">14</text>
+
+  <text
+
+    x="33%"
+
+    y="30%"
+
+    class="label"
+
+    text-anchor="left"
+
+    dominant-baseline="left">
+
+    Days since White Widow,
+
+  </text>
+
+   <text
+
+    x="33%"
+
+    y="55%"
+
+    class="label"
+
+    text-anchor="left"
+
+    dominant-baseline="left">
+
+    Orange Widow and
+
+  </text>
+
+</text>
+
+<text
+
+ x="33%"
+
+ y="80%"
+
+ class="label"
+
+ text-anchor="left"
+
+ dominant-baseline="left">
+
+ Lemon Sour Diesel sprouted.
+
+</text>
+
+ 
+
+ 
+
+   <script type="text/javascript">
+
+      (() => {
+
+        const loadTime = new Date("2025-03-13T11:01:00.000Z");
+
+        const [days] = document.querySelectorAll('svg > [name]');
+
+        const run = () => {
+
+          const timeDiff = Date.now() - loadTime;
+
+          const totalSeconds = Math.floor(Math.abs(timeDiff) / 1000);
+
+          const expired = false && timeDiff <= 0;
+
+          const [daysDiff, hoursDiff, minutesDiff, secondsDiff] = [
+
+            Math.floor(totalSeconds / 86400),
+
+            Math.floor((totalSeconds % 86400) / 3600),
+
+            Math.floor((totalSeconds % 3600) / 60),
+
+            totalSeconds % 60
+
+          ];
+
+ 
+
+          // Update text with minimal transition
+
+          const updateText = (element, value) => {
+
+            if (element.textContent !== value.toString()) {
+
+              element.style.opacity = '0.95'; // Much subtler opacity change
+
+              element.textContent = value;
+
+              element.style.opacity = '1';
+
+            }
+
+    
+                  };
+    
+              run();
+    updateText(days, daysDiff.toLocaleString());
+
+    updateText(hours, hoursDiff);
+
+    updateText(minutes, minutesDiff);
+
+    updateText(seconds, secondsDiff);
+
+    days.nextElementSibling.textContent = daysDiff === 1 ? 'Day' : 'Days';
+
+  
+
+    if( !expired ) {
+
+      end.setAttribute('visibility', 'hidden');
+
+    } else {
+
+      clearInterval(window.countdown_timer);
+
+      document.querySelectorAll('text').forEach((el) => el.setAttribute(
+
+        'visibility',
+
+        el.getAttribute("visibility") === "hidden" ? "visible" : "hidden"
+
+      ));
+
+    }
+  };
+
+  run();
+})();
+
+
+     
+
+ 
+
+    
+
+    
+
+        <title>My Timer</title>
+
+       
+
+ 
+
+       
+
+        </script>
+    
+
+ 
+
+
+  </svg>
+
+ 
+
+   <script type="text/javascript">
+
+      (() => {
+
+        const loadTime = new Date("2025-03-13T11:01:00.000Z");
+
+        const [days, hours, minutes, seconds, end] = document.querySelectorAll('svg > [name]');
+
+        const run = () => {
+
+          const timeDiff = Date.now() - loadTime;
+
+          const totalSeconds = Math.floor(Math.abs(timeDiff) / 1000);
+
+          const expired = false && timeDiff <= 0;
+
+          const [daysDiff, hoursDiff, minutesDiff, secondsDiff] = [
+
+            Math.floor(totalSeconds / 86400),
+
+            Math.floor((totalSeconds % 86400) / 3600),
+
+            Math.floor((totalSeconds % 3600) / 60),
+
+            totalSeconds % 60
+
+          ];
+
+ 
+
+          // Update text with minimal transition
+
+          const updateText = (element, value) => {
+
+            if (element.textContent !== value.toString()) {
+
+              element.style.opacity = '0.95'; // Much subtler opacity change
+
+              element.textContent = value;
+
+              element.style.opacity = '1';
+
+            }
+
+          };
+
+ 
+
+          updateText(days, daysDiff.toLocaleString());
+
+          updateText(hours, hoursDiff);
+
+          updateText(minutes, minutesDiff);
+
+          updateText(seconds, secondsDiff);
+
+          days.nextElementSibling.textContent = daysDiff === 1 ? 'Day' : 'Days';
+
+        
+
+          if( !expired ) {
+
+            end.setAttribute('visibility', 'hidden');
+
+          } else {
+
+            clearInterval(window.countdown_timer);
+
+            document.querySelectorAll('text').forEach((el) => el.setAttribute(
+
+              'visibility',
+
+              el.getAttribute("visibility") === "hidden" ? "visible" : "hidden"
+
+            ));
+
+           
+
+          };
+
+        };
+
+        window.countdown_timer = setInterval(run, 1000);
+
+        run();
+
+      })();
+
+  </script>
+<script>
+  const ImageService = require('./services/imageService');
+  const imageService = new ImageService();
+  const serviceId = 123;
+const imageFile = {
+    originalname: 'BB_GIF_IMG/BB_GIF.png',
+    buffer: fs.readFileSync('./BB_GIF_IMG/BB_GIF.png'),
+};
+const linkedImagePath = imageService.linkImageToService(serviceId, imageFile);
+console.log(`Image linked at: ${linkedImagePath}`);
+</script>
+ 
+
+ 
+
+ 
+
+</svg>
+
+</body>
+</html>
+
+        <style type="text/css">
+
+            @import url('https://fonts.googleapis.com/css2?family=Alata:wght@400;600&display=swap');
+
+            #_agr8vw {
+
+                font-family: Alata;
+
+                height: 100%;
+
+                width: 100%;
+
+                max-width: 644px;
+
+                max-height: 200px;
+
+                text-shadow: 1px 1px 3px rgb(5, 15, 5);
+
+            }
+
+           
+
+            #_agr8vw text {
+
+                font-family: Alata;
+
+                font-size: 10rem;
+
+                font-weight: 600;
+
+                transition: opacity 0.08s linear; /* Slightly longer but still quick transition */
+
+                paint-order: stroke;
+
+                shape-rendering: geometricPrecision;
+
+                text-rendering: geometricPrecision;
+
+                text-shadow: 1px 1px 3px rgb(5, 15, 5);
+
+            }
+
+           
+
+            #_agr8vw text.label {
+
+                font-size: 1.90rem;
+
+                font-weight: 650;
+
+                text-shadow: 1px 1px 3px rgb(5, 15, 5);
+
+            }
+
+        </style>
+
+ 
+
+        </svg>
+
+    </div>
+
+ 
+
+    </div>
+
+  </html>
